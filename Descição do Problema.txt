@@ -1,0 +1,11 @@
+Uma empresa de desenvolvimento de jogos precisa desenvolver um jogo de RPG em que heróis batalham contra monstros com um sistema baseado em turnos. A cada turno os heróis atacam os monstros e vice-versa até que todos os heróis ou todos os monstros tenham sido eliminados.
+
+Para construir o jogo, foi criada uma classe abstrata Character a partir da qual as classes Hero e Monster herdam. Essa classe abstrata garante que heróis e monstros tenham o atributo lifePoints (acessado por seu getter e setter) e que ambas implementem os métodos receiveDamage e attack.
+
+Nas classes Hero e Monstros foram implementadas as particularidades de cada uma delas, tanto seus atributos e métodos específicos, como também as suas implementações próprias para os métodos abstratos herdados de Character. Vale destacar que cada herói possui uma arma, representada pela classe Weapon, cujos métodos são utilizados nos métodos da classe Hero.
+
+Após a instanciação de heróis e monstros, a classe Battle recebe em seu construtor um array de cada tipo de personagem e os salva em seus atributos como estruturas ArrayList. A partir dessas estruturas, os demais métodos da classe Battle conseguem implementar a lógica de cada parte do jogo. Vale destacar que foi utilizado o polimorfismo entre Character, Hero e Monster para a implementação do método performCharactersActions.
+
+Sendo assim, o método main instancia as armas, os heróis, os monstros e a batalha e então executa o método runBattle para rodar o jogo.
+
+O balanceamento do jogo é definido pelos parâmetros utilizados na instanciação das armas, heróis e monstros, porém existem fatores aleatórios no método heal dos heróis e no construtor da batalha que permitem que o jogo tenha resultados diferentes cada vez que for executado, mesmo com os mesmos heróis e monstros.
